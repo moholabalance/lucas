@@ -1,0 +1,19 @@
+@charset "utf-8";
+table{
+    table-layout: fixed;
+}
+table tr th, td{
+    border:1px solid gray;
+    text-align: center;
+    padding:5px;
+
+}
+#tableboard{
+  
+  }
+  .center{
+      margin: auto;
+  }
+  a { 
+      text-decoration:none 
+    }
