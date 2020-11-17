@@ -17,37 +17,18 @@
         </header>
         <!--게시판-->
         <div class="center">
-         <button id="bttn"><a href="form.html">글쓰기</a></button>
          <!--게시판 목록-->
-            <table>
+        <table>
             <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>조회수</th>
-                <th>날짜</th>
+                <thead>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>날짜</th>
+                </thead>
             </tr>
-            <tr>
-                <td>1</td>
-                <td><a href="/post.html">안녕하세요! GS ITM인턴사원 정찬혁입니다!</a></td>
-                <td>jmoho</td>
-                <td>0</td>
-                <td>2020/11/14</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="#">[QnA]점심식사 관련</a></td>
-                <td>labalance</td>
-                <td>0</td>
-                <td>2020/11/14</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="#">[공지]사내 에티켓</a></td>
-                <td>Master</td>
-                <td>0</td>
-                <td>2020/11/14</td>
-            </tr>
+
             </table>
         <!--게시판 목록 끝-->
         </div>
@@ -60,11 +41,85 @@
                     <a href="#">3</a>
                     <a href="#"><i class="far fa-caret-square-right"></i></a>
                 </nav>
+            </div><br><br>
+            <div>
+                <form class="js-go">
+                    <div>
+                        <div>
+                            <label for="title">Title</label>
+                            <input style = "width : 45%" type ="text" id="title" placeholder="제목을 입력하세요." required><br><br>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="이름을 입력하세요." required>
+                            <label for="passw0rd">Password</label>
+                            <input type="password" id="passw0rd" placeholder="비밀번호를 입력하세요." required><br><br>
+                            <label for="Post" id="post">Post</label><br>
+                            <textarea style ="width : 50%; height : 400px;" placeholder="내용을 입력하세요."></textarea><br><br>
+                            <input type="submit" value="저장하기">
+                        </div>
+                    </div>
+                </form>     
             </div>
-
     </div>
     <script>
-        parent.ifun("성공");
+        const form =document.querySelector(".js-go");
+        const titleInput = document.querySelector('#title');
+        const nameInput = document.querySelector('#name');
+        const passwordInput=document.querySelector('#passw0rd');
+        const postInput=document.querySelector('#post');
+        const Outputtext=document.querySelector('.output');
+
+
+        const idx='idx';
+        let num=0;
+        let author ='';
+        let date = new Date();
+        let views = Math.floor(Math.random() *99) +1;
+
+        function onEditorFormSubmit(e){
+            e.preventDefault();
+
+            const title = titleInput.value;
+            const post = postInput.value;
+            
+            const lists = JSON.parse(localStorage.getItem(idx));
+                if(!lists){
+                    const obj=[];
+                    obj.push({
+                        num: `${num++}`,
+                        title: `${title}`,
+                        author:`${author}`,
+                        date: `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}.`,
+                        views: `${views++}`,
+                        content: `${post}`}
+                            );
+                 localStorage.setItem(idx,JSON.stringify(obj));
+                            }
+                else{
+                    lists.push({
+                        num: `${num++}`,
+                        title: `${title}`,
+                        author:`${author}`,
+                        date: `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}.`,
+                        views: `${views++}`,
+                        content: `${post}`
+                                }
+                                );
+                     localStorage.setItem(idx, JSON.stringify(lists));     
+                     }
+
+                     titleInput.value ='';
+                     postInput.value='';
+                     titleInput.focus();
+                     output(title);
+    }
+
+    function output(text){
+        Outputtext.innerHTML= `${text}`;
+    }
+    function init(){
+        form.addEventListener("submit", onEditorFormSubmit);
+    }
+    init();
     </script>
 </body>
 </html>
