@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #logo{ 
+            height : 100px;
+        }
+        #back{
+            background-image: url(image/car.PNG);
+            background-size:cover;
+                }
+        #font{
+            color:white;
+        }
+        #login_position{
+            text-align: center;
+            position : absolute;
+            left : 45%;
+            top : 45%;
+        }
+        #user_id{
+            width:200px;
+        }
+        #user_password{
+            width : 130px;
+        }
+    </style>
+    <title>GS Rational Car</title>
+</head>
+<body id="back">
+    <header>
+        <div style="background-image: url(image/back.png);">
+            <a href ="main.html"><img id="logo" src="image/gsitm.PNG" alt="logo"></a>
+        </div>
+    </header>
+
+    <div id="login_position">
+        <form action="main.html" class="get_name">
+            <label><a id="font">ID</a></label>
+            <input type="text" id="name" required placeholder="USERNAME"><br>
+            <label><a id="font">PASSWORD</a></label>
+            <input type="password" id="password" required placeholder="PASSWORD"><br><br>
+            <input type="submit" value="로그인">
+        </form>
+    </div>
+    <script src="js/local_storage.js"></script>
+</body>
+</html>

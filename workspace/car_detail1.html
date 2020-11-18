@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardetail</title>
+</head>
+<style>
+    table{
+        border : 1px solid grey;
+    }
+    td, th{
+        border : 1px solid black;
+    }
+    .gallery{
+            float: left;
+            margin:5px;
+            border : 1px solid #ccc;
+            width:300px;
+            height:300px;
+        }
+        .gallery:hover{
+            border:1px solid #777;
+        }
+        .gallery img{
+            width: 100%;
+            height :100%;
+        }
+    #table1{
+        width:400px;
+        height:300px
+    }
+    #table2{
+        width:710px;
+    }
+</style>
+<body>
+    <header>
+        <h2>중고자동차 성능 상태 점검 기록부</h2>
+    </header>
+    <div>
+        <div style="height: 320px;">
+            <div class="gallery">
+                <img src="image/starex.PNG" onmouseout="this.src='image/starex.PNG'" onmouseover="this.src='image/cardetail.gif'">
+            </div>
+        <div>
+            <table id="table1">
+                <tr>
+                    <th>판매자</th>
+                    <td>정차녁</td>
+                </tr>
+                <tr>
+                    <th>차종</th>
+                    <td>스타렉스 12인승</td>
+                </tr>
+                <tr>
+                    <th>차량번호</th>
+                    <td>12바1004</td>
+                </tr>
+                <tr>
+                    <th>연식</th>
+                    <td>2008년</td>
+                </tr>
+                <tr>
+                    <th>구입시기</th>
+                    <td>2009년</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    
+       
+    
+        <div>
+            <table id="table2">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>상태</th>
+                    <th>항목/해당부품</th>
+                    <th>특이사항</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>주행거리 계기상태</th>
+                    <td>양호</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>주행거리</th>
+                    <td>보통</td>
+                    <td>190,356Km</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>배출가스</th>
+                    <td>매연</td>
+                    <td>2%</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>튜닝</th>
+                    <td>있음</td>
+                    <td>배기구</td>
+                    <td>기존부품보유</td>
+                  </tr>
+                  <tr>
+                    <th>특별이력</th>
+                    <td>없음</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>색상</th>
+                    <td>흰색</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>용도</th>
+                    <td>운송업</td>
+                    <td></td>
+                    <td>화물운송</td>
+                  </tr>
+                </tbody>
+           </table>
+        </div>
+    </div>
+    <div><button><a href="market.html">목록</a></button></div>
+   
+</body>
+</html>

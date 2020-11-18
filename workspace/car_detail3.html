@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardetail</title>
+</head>
+<style>
+    table{
+        border-bottom : 5px outset rgb(107, 147, 163);
+    }
+    td, th{
+        border-bottom: 1px solid;
+    }
+    .gallery{
+            float: left;
+            margin:5px;
+            border : 0px solid #ccc;
+            width:300px;
+            height:300px;
+            border-radius: 80px;
+        }
+        .gallery:hover{
+            border:1px solid #777;
+        }
+        .gallery img{
+            width: 100%;
+            height :100%;
+            border-radius: 80px;
+        }
+    #table1{
+        width:400px;
+        height:300px
+    }
+    #table2{
+        width:710px;
+    }
+</style>
+<body>
+    <header>
+        <h2>중고자동차 성능 상태 점검 기록부</h2>
+    </header>
+    <div>
+        <div style="height: 320px;">
+            <div class="gallery">
+                <img src="image/mini.PNG" onmouseout="this.src='image/mini.PNG'" onmouseover="this.src='image/mini.gif'">
+            </div>
+        <div>
+            <table id="table1">
+                <tr>
+                    <th>판매자</th>
+                    <td>♥미니사랑♥</td>
+                </tr>
+                <tr>
+                    <th>차종</th>
+                    <td>미니쿠퍼s</td>
+                </tr>
+                <tr>
+                    <th>차량번호</th>
+                    <td>68ek 8228</td>
+                </tr>
+                <tr>
+                    <th>연식</th>
+                    <td>2012년</td>
+                </tr>
+                <tr>
+                    <th>구입시기</th>
+                    <td>2013년</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    
+       
+    
+        <div>
+            <table id="table2">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>상태</th>
+                    <th>항목/해당부품</th>
+                    <th>특이사항</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>주행거리 계기상태</th>
+                    <td>불량</td>
+                    <td>계기판</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>주행거리</th>
+                    <td>보통</td>
+                    <td>92,451km</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>배출가스</th>
+                    <td>LPG</td>
+                    <td>2%</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>튜닝</th>
+                    <td>없음</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>특별이력</th>
+                    <td>사고</td>
+                    <td>앞범퍼</td>
+                    <td>가로수 충돌</td>
+                  </tr>
+                  <tr>
+                    <th>색상</th>
+                    <td>흰색</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>용도</th>
+                    <td>자가용</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+           </table>
+        </div>
+    </div>
+    <div><button><a href="market.html">목록</a></button></div>
+
+   
+</body>
+</html>
