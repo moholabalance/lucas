@@ -24,7 +24,7 @@
     </header>
         <div id="revieww">
             <div id="reviewDe">
-                <button onclick="writeRe()">글쓰기</button>
+                <button style="margin-left: 250px;" onclick="writeRe()">글쓰기</button>
                 <!--게시판 목록-->
             <div>
                <table align="center">
@@ -47,12 +47,12 @@
                 <form class="get_form">
                     <div>
                         <div>
+                            <div>
                             <label for="title">Title</label>
                             <input style = "width : 30%" type ="text" id="title" placeholder="제목을 입력하세요." required><br><br>
                             <label for="name">Name</label>
                             <input type="text" id="name" placeholder="이름을 입력하세요." required>
-                            <label for="passw0rd">Password</label>
-                            <input type="password" id="passw0rd" placeholder="비밀번호를 입력하세요." required><br><br>
+                           </div>
                             <label for="Post" >Post</label><br>
                             <textarea id="post" style ="width : 30%; height : 200px;" placeholder="내용을 입력하세요."></textarea><br><br>
                             <input type="submit" value="저장하기">
@@ -62,8 +62,8 @@
             </div>
         </div>
 <div>
-        <footer style="background-image: url(image/back.png);">
-            <a>이이이이이</a>
+        <footer style="background-image: url(image/back.png); text-align: center;">
+            <a id="foot">COPYRIGHT (C)GS ITM CO., LTD. ALL RIGHT</a>
         </div>
     <script src="js/show.js"></script>
     <script src="js/local_storage.js"></script>
