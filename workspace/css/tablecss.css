@@ -5,20 +5,35 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 table{
     table-layout: fixed;
 }
 table tr th, td{
+    border-bottom:1px solid gray;
     text-align: center;
     padding:5px;
 }
           .gallery{
             margin:5px;
-            border : 1px solid #ccc;
             float:left;
             width:400px;
             margin-left: 30px;
             margin-right : 30px;
+            border-top-left-radius: 50px ;
+            border-top-right-radius: 50px ;
         }
         .gallery:hover{
             border:1px solid #777;
@@ -26,10 +41,12 @@ table tr th, td{
         .gallery img{
             width: 100%;
             height : 200px;
+            border-radius: 50px;
         }
         .desc {
             padding:15px;
             text-align : center;
+            font-family: 'NEXON Lv2 Gothic';
         }
         #logo{ 
             height : 100px;
@@ -64,11 +81,11 @@ table tr th, td{
             list-style: none;
         }
         a{
-            font-family: 'GmarketSansMedium';
             text-decoration: none;
-            color : rgb(61, 13, 105);
+            color : rgb(16, 21, 88);
         }
         nav{
+            font-family: 'GmarketSansMedium';   
             text-align : right;
             font-size:20px;
             margin-right: 170px;
@@ -97,8 +114,8 @@ table tr th, td{
             padding-top: 10px;
             padding-bottom: 10px;
             border-radius: 15px;
-            margin-left: 400px;
-            margin-right: 400px;
+            margin-left: 500px;
+            margin-right: 500px;
             }
             .contents__titles {
                 width: 100%;
@@ -106,12 +123,12 @@ table tr th, td{
                 justify-content: space-between;
                 align-items: center;
                 padding-bottom: 10px;
-                border-top: 2px solid rgb(0, 0, 0);
-                border-bottom: 2px solid rgb(0, 0, 0);
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
                 margin-bottom: 20px;
                 }
                 .contents__column {
-                    width: 400px;
+                    width: 800px;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -119,11 +136,10 @@ table tr th, td{
                     
                     .contents__content {
                     width: 100%;
-                    height: 200px;
-                    display: flex;
+                    height : 200px; 
                     justify-content: start;
                     align-items: center;
-                    border-bottom: 2px solid black;
+                    border-bottom: 1px solid grey;
                     }
         .search{
             height : 40px;
@@ -148,14 +164,5 @@ table tr th, td{
             color:#ffffff
         }
         #foot{
-            font-family: 'Chosunilbo_myungjo';
-            font-size : 20px;
             color: white;
-        }
-
-        @font-face {
-            font-family: 'Chosunilbo_myungjo';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
         }
