@@ -34,6 +34,7 @@ table tr th, td{
             margin-right : 30px;
             border-top-left-radius: 50px ;
             border-top-right-radius: 50px ;
+            margin-bottom: 50px;
         }
         .gallery:hover{
             border:1px solid #777;
@@ -62,7 +63,7 @@ table tr th, td{
             height:600px;
         }
         #revieww{
-            height:600px;
+            height:400px;
         }
         .aa{
             color : black;
