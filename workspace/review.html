@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="css/tablecss.css">
     <title>GS Rational Car</title>
     <style>
+        .get_form{
+            color: #5d5d5d;
+		background: #f2f2f2;
+		padding: 26px;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        }
     </style>
 </head>
 <body   >
@@ -27,7 +35,7 @@
         <div id="revieww">
             <div id="reviewDe">
                 <div style = "text-align: right; margin-right:17%;">
-                <a onclick ="writeRe()"id="writebtn"><img  style ="width:120px;    "src="image/button.PNG"></a>
+                <a onclick ="writeRe()"id="writebtn"><img  style ="width:120px;"src="image/button.PNG"></a>
             </div>
                 <!--게시판 목록-->
             <div>
@@ -49,7 +57,6 @@
             </div>
              <div id="show_form">
                 <form class="get_form">
-
                             <div style="text-align: left; margin-left:40%;">
                                 <label for="title">Title</label>
                                 <input style = "width : 28%" type ="text" id="title" placeholder="제목을 입력하세요." required><br><br>
