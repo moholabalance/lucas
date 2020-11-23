@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/css/styles.css" />
     <style>
         #logo{ 
             height : 100px;
@@ -19,6 +22,12 @@
             position : absolute;
             left : 45%;
             top : 45%;
+            color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
         }
         #user_id{
             width:200px;
@@ -29,17 +38,22 @@
     </style>
     <title>GS Rational Car</title>
 </head>
-<body id="back">
+<body id="login-form">
     <div style="left : 35%; top:200px; position : absolute;"><img src="image/loginlogo.png"></div>
     <div id="login_position">
-        <form action="main.html" class="get_name">
+        <div id = "login1">
             <label style="margin-right : 27%;"><a id="font">ID</a></label>
-            <input type="text" id="name" required placeholder="USERNAME"><br>
+            <input type="text" id="loginId" required placeholder="USERNAME"><br>
+        </div>      
+        <div id = "login2">
             <label><a id="font">PASSWORD</a></label>
-            <input type="password" id="password" required placeholder="PASSWORD"><br><br>
-            <input type="submit" value="로그인">
+            <input type="password" id="loginPassword" required placeholder="PASSWORD"><br><br>
+        </div>   
+            
+        <form class="loginbutton">
+            <input type="button" value="로그인">
         </form>
     </div>
-    <script src="js/local_storage.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

@@ -23,31 +23,28 @@
         </div>
     </header>
 <div style="height: 500px;">
-<div style = "width:33%; float: left; margin-right:10px;">
-    <img src="image/maincaron.png" onmouseout="this.src='image/maincaron.png'" onmouseover="this.src='image/maincar.png'" style="width:100%">
+<div style="width: 55%; height: 500px; float: left;">
+    <img id="target" src="image/maincar1.png" style="width:100%; height: 100%;">
 </div>
-<div style="float: left; width:33%; height:350px; text-align: center;">
+<div style="float: left; width:40%; height:500px; text-align: center;">
     <br>
-    <div style="height: 200px; margin-right: 10px;">
+    <div style="height: 200px; margin-right: 10px; margin-left: 100px;">
     <a>현재 등록되어있는 매물</a><br>
     <a id="counter3" style="font-size: 40px; color: cadetblue;"></a>
     </div>
-    <div>
-        <div>
+    <div style="height: 300px;">
+        <div style="float : left; margin-left: 150px;">
             <a href="addlog.html">
-                <img src="image/addlog.png" onmouseout="this.src='image/addlog.png'" onmouseover="this.src='image/addlogon.png'" style="width:100px;" >
+                <img src="image/addlog.png" onmouseout="this.src='image/addlog.png'" onmouseover="this.src='image/addlogon.png'" style="width:150px;" >
             </a>
         </div>
         <div>
-            <a href="login.html">
-                <img src="image/login.png" onmouseout="this.src='image/login.png'" onmouseover="this.src='image/loginon.png'" style="width:100px;">
+            <a href="logform.html">
+                <img src="image/login.png" onmouseout="this.src='image/login.png'" onmouseover="this.src='image/loginon.png'" style="width:150px;">
             </a>
         </div>
     </div>
  
-    </div>
-    <div style = "width:33%; float: left;">
-        <img src="image/gopriceon.png" onmouseout="this.src='image/gopriceon.png'" onmouseover="this.src='image/goprice.png'" style="width:100%">
     </div>
 </div>
 
@@ -59,6 +56,49 @@
 </body>
 <script src="js/count.js"> </script>
 <script src="js/clickmotion.js"> </script>
+<script language = "javascript">
 
+    var obTimeOut;
+    var ObjectArray = new Array();
+    ObjectArray[2] ="image/maincar2.png";
+    ObjectArray[1] ="image/maincar1.png";
+
+    var nObjectCnt =0;
+
+    function ShowDefaultRotate() // 스스로 자신을 호출하는 재귀함수 (Recursive Function)
+
+{
+
+	nObjectCnt++;
+
+
+
+	if( nObjectCnt < ObjectArray.length )
+
+	{
+
+		document.getElementById("target").src = ObjectArray[nObjectCnt];		 
+
+		obTimeOut = setTimeout("ShowDefaultRotate()",2000);  // 1초후에 자기자신을 호출 
+
+	}
+
+	else
+
+	{
+
+        nObjectCnt=0;
+        ShowDefaultRotate();
+
+	}		
+}
+
+
+function startAnimation()
+{
+      obTimeOut = window.setTimeout(ShowDefaultRotate,100); // 윈도우 로드 후 0.1초 후에 반복함수를 호출합니다.
+}
+ window.onload = startAnimation; 
+</script>
 
 </html>

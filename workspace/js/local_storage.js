@@ -64,6 +64,7 @@
           if (index < 5) {
             const tr = document.createElement('tr');
             tr.classList.add('board__content');
+            tr.style.borderBottom ='1px solid gray';
 
             const tdNum = document.createElement('td');
             tdNum.classList.add('board__content-column');
@@ -77,6 +78,7 @@
             const tdTitle = document.createElement('td');
             tdTitle.classList.add('board__content-column');
             tdTitle.textContent = list.title;
+          
 
             aTitle.appendChild(tdTitle);
 
@@ -125,6 +127,7 @@
           }
         });
       }
+      
       function onTitleClick(e) {
         contentsContainer.textContent = '';
         const lists = JSON.parse(localStorage.getItem(idx));

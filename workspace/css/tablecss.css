@@ -48,6 +48,7 @@ table tr th, td{
             padding:15px;
             text-align : center;
             font-family: 'NEXON Lv2 Gothic';
+            font-size: 20px;
         }
         #logo{ 
             height : 100px;
@@ -133,6 +134,7 @@ table tr th, td{
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                
                     }
                     
                     .contents__content {
@@ -167,3 +169,9 @@ table tr th, td{
         #foot{
             color: white;
         }
+       .board__content-colum{
+           
+         border-bottom-width: 0px;
+
+       }       
+       

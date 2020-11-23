@@ -29,22 +29,23 @@
     </header>
     <div style="width: 100%; height: 100%; margin-left: 35%;">
         <div style="border: 1px solid black;height: 400px;; width: 400px; padding:20px; background-color: rgb(245, 253, 169);">
-            <form>
-                <label style="margin-right: 52px;">ID</label>
-                <input class="inputlabel" type="ID" placeholder="ID를 입력하세요."><br><br>
-                <label>Password</label>
-                <input class="inputlabel" type="password" placeholder="비밀번호를 입력하세요."><br><br>
-                <label style="margin-right:23px;">E-mail</label>
-                <input class="inputlabel" type="email" placeholder="example@gsitm.com"><br><br>
-                <label style="margin-right:37px;">별칭
-                </label>
-                <input class="inputlabel" type="email" placeholder="별칭을 입력하세요."><br><br>
-                <button style="margin-left: 35%;"><a onclick="showalert()" href="main.html">회원가입</a></button>
-            </form>
+                <div id = "first">   
+                    <label style="margin-right: 52px;">ID</label>
+                    <input id="id" type="ID" placeholder="ID를 입력하세요."><br><br>
+                </div>
+                <div id="second">
+                    <label>Password</label>
+                    <input id = "password" type="text" placeholder="비밀번호를 입력하세요."><br><br>
+                </div> 
+                <form class="inbutton">             
+                <input type = "submit" value ="회원가입">
+                </form>
         </div>
      
 
     </div>
 </body>
 <script src="js/clickmotion.js"></script>
+<script src="js/join.js">
+</script>
 </html>

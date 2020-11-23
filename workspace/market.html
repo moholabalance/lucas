@@ -22,22 +22,42 @@
         </nav>
         </div>
     </header>
+    <div class="header">
+        <label>검색 : </label><input onkeyup="filter()" type="text" id="value" placeholder="이름 또는 연식">
+      </div>
     <div style="text-align: right; margin-right: 10%;"><button><a id="carcar" href="car_form.html">매물 등록</a></button></div><br>
+
     <div id="market">
         <div class="gallery">
             <a href="car_detail1.html">
             <img src="image/starex.PNG" alt="설명"></a>
-            <div class="desc"><strong>15인승 스타렉스</strong></div>
+            <div class="desc">
+                <ul>
+                    <li>스타렉스</li>
+                    <li>08/09식</li>
+                </ul>
+            </div>
+            
         </div>
         <div class="gallery">
             <a href="car_detail2.html">
             <img src="image/gomul.PNG" alt="설명"></a>
-            <div class="desc"><strong>가성비 최고 그레이스</strong></div>
+            <div class="desc">
+                <ul>
+                    <li>그레이스</li>
+                    <li>95/96식</li>
+                </ul>
+        </div>
         </div>
         <div class="gallery">
             <a href="car_detail3.html">
             <img src="image/mini.PNG" alt="설명"></a>
-            <div class="desc"><strong>2012 미니쿠퍼s</strong></div>
+            <div class="desc">
+                <ul>
+                    <li>미니쿠퍼 s</li>
+                    <li>12/13식</li>
+                </ul>
+            </div>
         </div>
             
         </div>
@@ -46,6 +66,23 @@
                 <a id="foot">COPYRIGHT (C)GS ITM CO., LTD. ALL RIGHT</a>
             </footer>
         </div>
-      
+      <script type="text/javascript">
+       function filter(){
+
+        var value, name, item, i;
+
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("gallery");
+
+        for(i=0;i<item.length;i++){
+          name = item[i].getElementsByClassName("desc");
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "block";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+      </script>
 </body>
 </html>
