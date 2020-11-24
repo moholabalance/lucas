@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/tablecss.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div style="background-image: url(image/back.png);">
+            <a href ="main.html"><img id="logo" src="image/gsitm.PNG" alt="logo"></a>
+            <img id="logo"src="image/logo.PNG">
+        </div>
+        <div style="background-color: rgba(204, 204, 204, 0.938);">
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="market.html">장터</a></li>
+                <li><a href="review.html">후기</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="header">
+        <label>검색 : </label><input onkeyup="filter()" type="text" id="value" placeholder="이름 또는 연식">
+      </div>
+    <div style="text-align: right; margin-right: 10%;"><button><a id="carcar" href="car_form.html">매물 등록</a></button></div><br>
+
+    <div id="market">
+        <div class="gallery">
+            <a href="car_detail1.html">
+            <img src="image/starex.PNG" alt="설명"></a>
+            <div class="desc">
+                <ul>
+                    <li>스타렉스</li>
+                    <li>08/09식</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="gallery">
+            <a href="car_detail2.html">
+            <img src="image/gomul.PNG" alt="설명"></a>
+            <div class="desc">
+                <ul>
+                    <li>그레이스</li>
+                    <li>95/96식</li>
+                </ul>
+        </div>
+        </div>
+        <div class="gallery">
+            <a href="car_detail3.html">
+            <img src="image/mini.PNG" alt="설명"></a>
+            <div class="desc">
+                <ul>
+                    <li>미니쿠퍼 s</li>
+                    <li>12/13식</li>
+                </ul>
+            </div>
+        </div>
+            
+        </div>
+        <div style="bottom : 0; left : 0; right: 0; position : flex; width:100%">
+            <footer style="background-image: url(image/back.png); text-align: center;">
+                <a id="foot">COPYRIGHT (C)GS ITM CO., LTD. ALL RIGHT</a>
+            </footer>
+        </div>
+      <script type="text/javascript">
+       function filter(){
+
+        var value, name, item, i;
+
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("gallery");
+
+        for(i=0;i<item.length;i++){
+          name = item[i].getElementsByClassName("desc");
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "block";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
