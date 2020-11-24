@@ -1,0 +1,174 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+table{
+    table-layout: fixed;
+}
+table tr th, td{
+    border-bottom:1px solid gray;
+    text-align: center;
+    padding:5px;
+}
+          .gallery{
+            margin:5px;
+            float:left;
+            width:400px;
+            margin-left: 30px;
+            margin-right : 30px;
+            border-top-left-radius: 50px ;
+            border-top-right-radius: 50px ;
+            margin-bottom: 50px;
+        }
+        .gallery:hover{
+            border:1px solid #777;
+        }
+        .gallery img{
+            width: 100%;
+            height : 200px;
+            border-radius: 50px;
+        }
+        .desc {
+            padding:15px;
+            text-align : center;
+            font-family: 'NEXON Lv2 Gothic';
+            font-size: 20px;
+        }
+        #logo{ 
+            height : 100px;
+        }
+        #show_form{
+            display: none;
+        }
+        #homee{
+            width : 100%;
+            height: 600px;
+        }
+        #market{
+            height:600px;
+        }
+        #revieww{
+            height:400px;
+        }
+        .aa{
+            color : black;
+        }
+        table {
+            width:1000px;
+            border-top : 1px solid #444444;
+            border-collapse : collapse;
+        }
+        th, td{
+            border-bottom: 1px solid #444444;
+            padding : 10px;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color : rgb(16, 21, 88);
+        }
+        nav{
+            font-family: 'GmarketSansMedium';   
+            text-align : right;
+            font-size:20px;
+            margin-right: 170px;
+        }
+        nav li{
+            display:inline;
+            margin-left:30px;
+        }
+        footer{
+            width : 100%;
+            height: 5%; 
+        }
+        header{
+            background-image: url(image/back.png);
+        }
+        .board__index-container{
+            text-align: center;
+        }
+        .board__index-link{
+            color : black;
+            margin : 5px;
+        }
+        .contents__container {
+            margin: 10px 0px;
+            height: 220px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+            margin-left: 500px;
+            margin-right: 500px;
+            }
+            .contents__titles {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 10px;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                margin-bottom: 20px;
+                }
+                .contents__column {
+                    width: 800px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+             		
+                    }
+                    
+                    .contents__content {
+                    width: 100%;
+                    height : 200px; 
+                    justify-content: start;
+                    align-items: center;
+                    border-bottom: 1px solid grey;
+                    }
+        .search{
+            height : 40px;
+            width : 400px;
+            border: 1px solid #1b5ac2;
+        }
+        #searchbar{
+            font-size : 16px;
+            width : 325px;
+            padding : 10px;
+            border : 0px;
+            outline : none;
+            float : left; 
+        }
+        #searchbtn{
+            width:50px;
+            height: 100%;
+            border : 0px;
+            background : #1b5ac2;
+            outline : none;
+            float:right;
+            color:#ffffff
+        }
+        #foot{
+            color: white;
+        }
+        .board__content-column{
+     	border-bottom-width : 0px;
+        	}
