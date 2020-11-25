@@ -6,6 +6,21 @@
     <link rel="stylesheet" type="text/css" href="css/tablecss.css">
     <title>GS Rational Car</title>
     <style>
+        #topform{
+            text-align: center; 
+            border:1px solid black;
+            border-bottom: 0px;
+            width : 500px;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+        #botform{
+            width : 500px; 
+            border : 1px solid black;
+            text-align: center;
+            border-top: 0px;
+            box-shadow: 3px 5px; 
+        }
     </style>
 </head>
 <body   >
@@ -48,17 +63,17 @@
              </div>
             </div>
              <div id="show_form">
-                <form class="get_form">
-                            <div style="text-align: left; margin-left:40%;">
+                <form class="get_form" style="margin-left : 400px;">
+                            <div id="topform">
                                 <label for="title">Title</label>
-                                <input style = "width : 28%" type ="text" id="title" placeholder="제목을 입력하세요." required><br><br>
+                                <input style = "width : 70%" type ="text" id="title" placeholder="제목을 입력하세요." required><br><br>
                                 <label for="name">Name</label>
-                                <input style ="width :27%" type="text" id="name" placeholder="이름을 입력하세요." required><br>
+                                <input style ="width :67%" type="text" id="name" placeholder="이름을 입력하세요." required><br>
                             </div>
-                            <div style="margin-left:40%;">
+                            <div id="botform">
                                 <label for="Post" >Post</label><br>
                                 <textarea id="post" style ="width : 300px; height : 270px;" placeholder="내용을 입력하세요."></textarea><br><br>
-                                <input type="submit" value="저장하기">
+                                <input type="submit" value="저장하기"><br>
                              </div>
                         
                 </form>     
