@@ -144,9 +144,10 @@ ul{
 	<div style="background-color: rgba(204, 204, 204, 0.938);">
 	<nav>
 		<ul>
-			<li><a href="/GSRationalCar/index.jsp">HOME</a></li>
+			 <li><a href="/GSRationalCar/index.jsp">HOME</a></li>
 			<li><a href="/GSRationalCar/views/market.jsp">장터</a></li>
-			<li><a href="/GSRationalCar/views/review.jsp">후기</a></li>
+			<li><a href="/GSRationalCar/result/board.jsp">후기</a></li>
+			<li><a href="/GSRationalCar/views/sessionout.jsp">로그아웃</a></li>
 		</ul>
 	</nav>
 	</div>
@@ -160,13 +161,11 @@ ul{
 	<div class="row">
 		<div class="col-md-10 col-center">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-			<!-- Carousel indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
 			</ol>   
-			<!-- Wrapper for carousel items -->
 			<div class="carousel-inner">
 				<div class="item active">
 					<div class="row">
@@ -233,9 +232,7 @@ ul{
 								</div>
 								<div class="thumb-content">
 									<h4>제네시스</h4>
-									<p>15/16식
-
-                                    </p>
+									<p>15/16식</p>
                                     <p>중형</p>
 									<a href="#" class="btn btn-primary">More <i class="fa fa-angle-right"></i></a>
 								</div>						
@@ -287,7 +284,6 @@ ul{
 					</div>
 				</div>
 			</div>
-			<!-- Carousel controls -->
 			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
 				<i class="fa fa-angle-left"></i>
 			</a>
@@ -299,7 +295,7 @@ ul{
 	</div>
 </div>
 </body>
-	      <script type="text/javascript">
+	      <script type="text/javascript">//검색 기능 JS
        function filter(){
 
         var value, name, item, i;
@@ -308,7 +304,7 @@ ul{
         item = document.getElementsByClassName("col-sm-4");
         fa = document.getElementsByClassName("carousel-control left");
 
-        for(i=0;i<item.length;i++){
+        for(i=0;i<item.length;i++){ //내용을 검색하고 일치하는 이미지만 표현.
           name = item[i].getElementsByClassName("thumb-content");
           if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
             item[i].style.display = "block";

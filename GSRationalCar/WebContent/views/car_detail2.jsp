@@ -13,8 +13,9 @@
         <h2>중고자동차 성능 상태 점검 기록부</h2>
     </header>
     <div>
-        <div style="height: 320px;">
+        <div style="height: 320px;"><!-- 자동차 세부 이미지 확인  -->
             <div class="gallery">
+            <!-- 이미지에 마우스 커서 올리면 이미지 전환 -->
                 <img src="/GSRationalCar/resources/image/gomul.PNG" onmouseout="this.src='/GSRationalCar/resources/image/gomul.PNG'" onmouseover="this.src='/GSRationalCar/resources/image/gomul.gif'">
             </div>
         <div>

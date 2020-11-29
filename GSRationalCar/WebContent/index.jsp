@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,20 +9,23 @@
     <link rel="stylesheet" type="text/css" href="/GSRationalCar/resources/css/tablecss.css">
     <title>GS Rational Car</title>
 </head>
-<body>
     <header>
-        <div style="background-image: url(/GSRationalCar/resources/image/back.png);">
-            <a href ="index.jsp"><img id="logo" src="/GSRationalCar/resources/image/gsitm.PNG" alt="logo"></a>
+        <div style="background-image: url(/GSRationalCar/resources/image/back.png);"> <!-- 헤더 로고 -->
+            <a href ="/GSRationalCar/index.jsp"><img id="logo" src="/GSRationalCar/resources/image/gsitm.PNG" alt="logo"></a>
             <img id="logo"src="/GSRationalCar/resources/image/logo.PNG">
-        </div>
+        </div> <!-- 헤더 로고 끝 -->
         <div style="background-color: rgba(204, 204, 204, 0.938);">
-        <nav>
+        <nav> <!-- 상단 메뉴 로그인 한 회원에게만 보여진다.-->
             <ul>
-                <li><a href="index.jsp">HOME</a></li>
+            <c:if test="${id != null }">
+                <li><a href="/GSRationalCar/index.jsp">HOME</a></li>
                 <li><a href="/GSRationalCar/views/market.jsp">장터</a></li>
-                <li><a href="/GSRationalCar/views/review.jsp">후기</a></li>
+                <li><a href="/GSRationalCar/result/board.jsp">후기</a></li>
+                <li><a href="/GSRationalCar/views/sessionout.jsp">로그아웃</a></li>
+                </c:if>
+                <li></li>
             </ul>
-        </nav>
+        </nav><!-- 상단 메뉴 끝 -->
         </div>
     </header>
     
@@ -35,9 +39,10 @@
     <a>현재 등록되어있는 매물</a><br>
     <a id="counter3" style="font-size: 40px; color: cadetblue;"></a>
     </div>
+    <c:if test="${id == null }">
     <div style="height: 300px;">
         <div style="float : left; margin-left: 150px;">
-            <a href="/GSRationalCar/views/join.jsp">
+            <a href="/GSRationalCar/join.jsp">
                 <img src="/GSRationalCar/resources/image/addlog.png" onmouseout="this.src='/GSRationalCar/resources/image/addlog.png'" onmouseover="this.src='/GSRationalCar/resources/image/addlogon.png'" style="width:150px;" >
             </a>
         </div>
@@ -47,7 +52,14 @@
             </a>
         </div>
     </div>
- 
+ </c:if>
+  <c:if test="${id != null }">
+ <%	
+	String name = (String)request.getAttribute("id");
+	if(name == null) name="";%>
+	
+	<h2><%=name %>님 환영합니다.</h2> 
+	</c:if>
     </div>
 </div>
 
@@ -57,8 +69,7 @@
         </footer>
     </div>
 </body>
-<script src="/GSRationalCar/resources/js/count.js"> </script>
-<script src="/GSRationalCar/resources/js/clickmotion.js"> </script>
+<script src="/GSRationalCar/resources/js/count.js"> </script> <!-- 매물갯수 카운팅 되는 효과구현 JS -->
 <script type="text/javascript">
 
     var obTimeOut;
@@ -85,7 +96,7 @@
 
 	}
 
-	else
+	else //무한루프 구현을 통해 이미지가 계속 바뀌도록 구현
 
 	{
 
