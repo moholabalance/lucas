@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${boardview.boardTitle } - 게시판</title>
+<title>${boardview.boardTitle }-게시판</title>
 <style>
 * {
 	margin: 4px 0;
@@ -61,7 +61,6 @@ tr {
 	border-color: rgb(180, 180, 180);
 	border-width: 1px;
 }
-
 </style>
 </head>
 <body>
@@ -77,30 +76,27 @@ tr {
 				<td width="30%">작성자 : ${boardview.id }</td>
 				<td width="30%" align="right">${boardview.boardDate }</td>
 			</tr>
-			<tr id="content" valign="top" style="border-top-color: rgb(100, 100, 100); border-top-width: 1px">
-				<td colspan="3">${boardview.boardContent }</td>
+			<tr id="content" valign="top"
+				style="border-top-color: rgb(300, 100, 100); border-top-width: 1px">
+				<td colspan="3">${boardview.boardContent}</td>
 			</tr>
 			<tr>
 				<td colspan="3">조회수 ${boardview.boardHit }</td>
 			</tr>
-		
-		<c:choose>
-			<c:when test="${boardview.id == id}">
-				<td>
-					<a href="boarddelete.do?boardId=${boardview.boardId}">
-						<button class="btn1">삭제</button>
-					</a>
-				</td>
-				<td>
-					<a href="boardupdate.do?boardId=${boardview.boardId}">
-						<button class="btn1">수정</button>
-					</a>
-				</td>
-			</c:when>
-		</c:choose>
+
+			<c:choose>
+				<c:when test="${boardview.id == id || id=='admin'}">
+					<td><a href="boarddelete.do?boardId=${boardview.boardId}">
+							<button class="btn1">삭제</button>
+					</a></td>
+					<td><a href="boardupdate.do?boardId=${boardview.boardId}">
+							<button class="btn1">수정</button>
+					</a></td>
+				</c:when>
+			</c:choose>
 		</table>
 		<div id="btnCon">
-			<a href="/GSRationalCar/result/board.jsp">
+			<a href="/GSRationalCar/boardlist.do?num=1">
 				<button class="btn2">목록</button>
 			</a>
 		</div>

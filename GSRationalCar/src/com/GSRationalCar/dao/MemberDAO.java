@@ -4,40 +4,46 @@ import java.sql.*;
 import com.GSRationalCar.vo.MemberVO;
 
 public class MemberDAO {
-					
+
 	private static MemberDAO dao = new MemberDAO();
-	private MemberDAO() {}
+
+	private MemberDAO() {
+	}
+
 	public static MemberDAO getInstance() {
 		return dao;
 	}
-	public Connection connect() {
+
+	public Connection connect() {//DB와 자바 연결
 		Connection conn = null;
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
-	         conn = DriverManager.getConnection("jdbc:mariadb://gsitm-intern2020.c5tdqadv8vmd.ap-northeast-2.rds.amazonaws.com/it1456", "it1456", "it1456");
+			conn = DriverManager.getConnection(
+					"jdbc:mariadb://gsitm-intern2020.c5tdqadv8vmd.ap-northeast-2.rds.amazonaws.com/it1456", "it1456",
+					"it1456");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return conn;
 	}
-	
+
 	public void close(Connection conn, PreparedStatement ps, ResultSet rs) {
-		if (rs !=null) {
+		if (rs != null) {
 			try {
 				rs.close();
 			} catch (Exception ex) {
-				System.out.println("오류발생 : " +ex);
+				System.out.println("오류발생 : " + ex);
 			}
 		}
 		close(conn, ps);
 	}
-	
+
 	public void close(Connection conn, PreparedStatement ps) {
-		if (ps !=null) {
+		if (ps != null) {
 			try {
 				ps.close();
 			} catch (Exception ex) {
-				System.out.println("오류발생 : " +ex);
+				System.out.println("오류발생 : " + ex);
 			}
 		}
 		if (conn != null) {
@@ -49,51 +55,50 @@ public class MemberDAO {
 		}
 	}
 
-	public void memberInsert(MemberVO member) {
-			Connection conn = null;
-			PreparedStatement pstmt = null;
-		
+	public void memberInsert(MemberVO member) {//회원가입
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
 		try {
 			conn = connect();
-			pstmt = conn.prepareStatement("insert into member values(?,?,?,?)");
+			pstmt = conn.prepareStatement("insert into member values(?,?,?,?,sysdate())");
 			pstmt.setString(1, member.getId());
 			pstmt.setString(2, member.getPasswd());
 			pstmt.setString(3, member.getName());
 			pstmt.setString(4, member.getPhone());
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
-			System.out.println("오류 발생 :" +ex);
+			System.out.println("오류 발생 :" + ex);
 		} finally {
 			close(conn, pstmt);
 		}
 	}
-	
-	public MemberVO memberLogin(String id) {
+
+	public MemberVO memberLogin(String id) {//로그인 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		
+
 		MemberVO member = null;
-		
+
 		try {
 			conn = connect();
-			pstmt = conn.prepareStatement("select id, passwd from member where id=?");
+			pstmt = conn.prepareStatement("select id, passwd from member where id=binary?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-			if(rs.next()) {
+			if (rs.next()) {
 				member = new MemberVO();
-				
+
 				member.setId(rs.getString(1));
 				member.setPasswd(rs.getString(2));
 			}
-			
+
 		} catch (Exception ex) {
-			System.out.println("오류 발생 :" +ex);
+			System.out.println("오류 발생 :" + ex);
 		} finally {
 			close(conn, pstmt, rs);
 		}
-		
+
 		return member;
 	}
 }
-

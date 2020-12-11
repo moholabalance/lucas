@@ -18,7 +18,7 @@
 	width: 840px;
 }
 
-#wriTitle{
+#wriTitle {
 	text-align: center;
 	background-color: rgb(100, 100, 100);
 	width: 800px;
@@ -26,6 +26,7 @@
 	padding: 12px 0;
 	color: white;
 }
+
 table {
 	width: 840px;
 	margin: 25px 0;
@@ -69,10 +70,12 @@ textarea {
 </style>
 </head>
 <body>
-	
+
 	<div class="controller">
-	<div id="wriTitle"><b>게시글 작성</b></div>
-		<form action="/GSRationalCar/write.do" method="post">
+		<div id="wriTitle">
+			<b>게시글 작성</b>
+		</div>
+		<form action="/GSRationalCar/write.do" method="post"> <!-- FrontController를 통해 BoardWriteController로 전송 -->
 			<table>
 
 				<tr>
@@ -85,13 +88,15 @@ textarea {
 							name="boardContent" required></textarea></td>
 				</tr>
 				<tr>
-					<td align="center"><input type="submit" value="작성" class="button"></td>
-					<td align="center"><input type="reset" value="내용 초기화" class="button"></td>
+					<td align="center"><input type="submit" value="작성"
+						class="button"></td>
+					<td align="center"><input type="reset" value="내용 초기화"
+						class="button"></td>
 				</tr>
 			</table>
 		</form>
 		<div>
-			<a href="/board.do">
+			<a href="/GSRationalCar/boardlist.do?num=1">
 				<button>게시판</button>
 			</a>
 		</div>
